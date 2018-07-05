@@ -127,7 +127,7 @@ workflows:
       - psscriptanalyzer
       - packer-validate
       - terraform-validate
-      - build-windows-2016:
+      - build-windows-2019:
           requires:
             - shellcheck
             - psscriptanalyzer
@@ -138,7 +138,7 @@ workflows:
               ignore: /.*/
             branches:
               only:
-                - master
+                - test-2019
 
   build-infrastructure:
     jobs:
